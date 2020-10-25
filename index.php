@@ -9,20 +9,21 @@
 </head>
 
 <body>
-    <!-- Modal -->
+    <!--POP UP Modal -->
     <div class="modal fade" id="studentaddmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-            <form>
+
                 <div class="modal-header">
                     <h5 class="modal-title" id="studentaddmodellabel">Add Student Data</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <!-- Form -->
-                    
+
+                <form action="insertdata.php" method="POST">
+                    <div class="modal-body">
+                        <!-- Form -->
                         <div class="form-group">
                             <label>Name</label>
                             <input type="text" name="fname" class="form-control" placeholder="Enter your Firs Name">
@@ -40,15 +41,15 @@
 
                         <div class="form-group">
                             <label>Contect</label>
-                            <input type="number" name="contect" class="form-control" placeholder="Enter your Phone Number">
+                            <input type="number" name="contact" class="form-control" placeholder="Enter your Phone Number">
                         </div>
-                    
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" name="insertdata" class="btn btn-primary">Save Data</button>
-                </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" name="insertdata" class="btn btn-primary">Save Data</button>
+                    </div>
                 </form>
             </div>
         </div>
