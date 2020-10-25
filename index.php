@@ -70,7 +70,13 @@
 
             <div class="card">
                 <div class="card-body">
+                    <?php
+                    $connection = mysqli_connect("localhost", "root", "");
+                    $db = mysqli_select_db($connection, 'PHP-CRUD2');
+                    $query = "SELECT * FROM student";
+                    $query_run = mysqli_query($connection, $query);
 
+                    ?>
                     <table class="table table-dark">
                         <thead>
                             <tr>
@@ -81,15 +87,29 @@
                                 <th scope="col">Contact</th>
                             </tr>
                         </thead>
+                        <?php
+
+                    if ($query_run) {
+                        foreach ($query_run as $row) {
+
+                    ?>
                         <tbody>
                             <tr>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
+                                <td> <?php echo $row['id'];?></td>
+                                <td> <?php echo $row['fname'];?></td>
+                                <td> <?php echo $row['lname'];?></td>
+                                <td> <?php echo $row['course'];?></td>
+                                <td> <?php echo $row['contact'];?></td>
+
                             </tr>
                         </tbody>
+                        <?php
+                        }
+                    } else {
+                        echo "No Record";
+                    }
+
+                    ?>
                     </table>
                 </div>
             </div>
