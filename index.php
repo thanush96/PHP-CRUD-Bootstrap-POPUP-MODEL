@@ -69,7 +69,7 @@
                     </button>
                 </div>
 
-                <form action="" method="POST">
+                <form action="updatedata.php" method="POST">
                     <div class="modal-body">
                         <!-- Form -->
                         <input type="hidden" name="update_id" id="update_id">
