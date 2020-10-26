@@ -18,6 +18,7 @@ if(isset($_POST['insertdata'])){
     else
     {
         echo'<script>alert("Data Not Saved !");</script>';
+
     }
 
 
